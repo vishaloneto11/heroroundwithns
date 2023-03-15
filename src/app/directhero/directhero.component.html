@@ -1,0 +1,99 @@
+<div class="container mt-2">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>DIRECTIVES</h3>
+        </div>
+        <div class="col-md-6">
+            <button type="button" class="btn btn-primary" (click)="onLoginfun()">Login to Directives</button>
+        </div>
+    </div>
+</div>
+<hr>
+<div class="container mt-5" *ngIf="isUserLoggedIn; else Logout">
+    <div class="row">
+        <div class="col-md-12">
+            <p>Welcome To Directives</p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Aindex</th>
+                        <th scope="col">Serial No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">City</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users; let i = index">
+                        <th scope="row">{{i}}</th>
+                        <th scope="row">{{user.id}}</th>
+                        <td>{{user.name}}</td>
+                        <td>{{user.city}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<ng-template #Logout>
+    <div class="container" #Logout>
+        <div class="row">
+            <div class="col md-5">
+                <h6>Please Log In .....</h6>
+            </div>
+        </div>
+    </div>
+</ng-template>
+
+<div class="container mt-2 ">
+    <h5>Switch-Case section</h5>
+    <div class="row">
+        <div class="col md-4">
+            <p>Country :</p>
+        </div>
+        <div class="col md-4">
+            <select (change)="onChange($event)">
+                <option value="">Select Country</option>
+                <option *ngFor="let c of country" [value]="c.code">{{c.name}}</option>
+
+            </select>
+        </div>
+        <div class="col md-4" [ngSwitch]="selectedCountry">
+            <div *ngSwitchCase="'IN'">
+                <h6>India Code +91</h6>
+            </div>
+            <div *ngSwitchCase="'US'">
+                <h6>USA Code +51</h6>
+            </div>
+            <div *ngSwitchCase="'TJK'">
+                <h6>Tajakistan Code +123</h6>
+            </div>
+            <div *ngSwitchCase="'JAP'">
+                <h6>Japan Code +521</h6>
+            </div>
+            <div *ngSwitchCase="'KR'">
+                <h6>Korea Code +621</h6>
+            </div>
+            <div *ngSwitchCase="'PH'">
+                <h6>Phillipiness Code +901</h6>
+            </div>
+            <div *ngSwitchCase="'IRR'">
+                <h6>Iran Code +925</h6>
+            </div>
+            <div *ngSwitchCase="'IR'">
+                <h6>Iraq Code +981</h6>
+            </div>
+            <div *ngSwitchCase="'SI'">
+                <h6>SouthIndia Code +66</h6>
+            </div>
+            <div *ngSwitchCase="'EN'">
+                <h6>Europe Code +33</h6>
+            </div>
+            <div *ngSwitchDefault>
+                <h6>Code</h6>
+            </div>
+
+
+        </div>
+    </div>
+</div>
