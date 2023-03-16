@@ -1,0 +1,120 @@
+<div class="">
+    <p>Welcome to {{pageTitles | titlecase}}</p>
+    <div class="row">
+        <div class="col md-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="bg-dark text-white">
+                        <th scope="col">ID</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">CITY</th>
+                        <th scope="col">SALARY</th>
+                        <th scope="col">DATE OF BIRTH</th>
+                        <th scope="col">AGE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cuser of clientUser">
+                        <th scope="row">{{cuser.id}}</th>
+                        <td>{{cuser.name | uppercase}}</td>
+                        <td>{{cuser.city | lowercase}}</td>
+                        <td>{{cuser.salary | currency :'INR' : 'code': '2.2-2'}}</td>
+                        <td>{{cuser.dob | date}}</td>
+                        <td>{{cuser.dob | age}}</td>
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <p>Welcome To Services</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="bg-success text-white">
+                        <th scope="col">ID</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">CITY</th>
+                        <th scope="col">SALARY</th>
+                        <th scope="col">DATE OF BIRTH</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cuser of employDetails">
+                        <th scope="row">{{cuser.id}}</th>
+                        <td>{{cuser.name }}</td>
+                        <td>{{cuser.city | lowercase}}</td>
+                        <td>{{cuser.salary | currency }}</td>
+                        <td>{{cuser.dob }}</td>
+
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="">
+    <div class="row">
+        <div class="col">
+            <p>Welcome To HTTP SERVICES</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="bg-primary text-white">
+                        <th scope="col">ID</th>
+                        <th scope="col">NAME</th>
+                        <th scope="col">USERNAME</th>
+                        <th scope="col">EMAIL</th>
+                        <th scope="col">ADDRESS</th>
+                        <th scope="col">STREET</th>
+                        <th scope="col">CITY</th>
+                        <th scope="col">ZIPCODE</th>
+                        <!-- <th scope="col">GEO1</th> -->
+                        <!-- <th scope="col">GEO2</th> -->
+                        <th scope="col">PHONE</th>
+                        <th scope="col">WEBSITE</th>
+                        <th scope="col">COMPANY</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of onlineUserWeb">
+                        <th scope="row">{{user.id}}</th>
+                        <th>{{user.name}}</th>
+                        <th>{{user.username}}</th>
+                        <th>{{user.email}}</th>
+                        <th>{{user.address.suite}}</th>
+                        <th>{{user.address.street}}</th>
+                        <th>{{user.address.city}}</th>
+                        <th>{{user.address.zipcode}}</th>
+                        <th>{{user.phone}}</th>
+                        <th>{{user.website}}</th>
+                        <th>{{user.company.name}}</th>
+
+
+
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- http services data -->
+<!-- <pre>
+    {{onlineUserWeb |json}}
+</pre> -->
+
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
+<!-- To debugging data we use json pipe vishal  with pre tag -->
+<!-- <pre>
+    {{clientUser | json}}
+</pre> -->
+<!-- $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -->
