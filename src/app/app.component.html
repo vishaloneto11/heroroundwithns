@@ -1,25 +1,37 @@
-<div class=" ">
-    <div class="row">
-        <div class="col-md-12">
-            <app-herobinder></app-herobinder>
-        </div>
-    </div>
-    <hr>
-    <br>
-    <div class="row">
-        <div class="col-md-12">
-            <app-directhero></app-directhero>
-        </div>
-    </div>
-    <br>
-    <hr>
-    <app-letsdopipes></app-letsdopipes>
+<div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img [src]="image" class="headerlogo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <div class="row">
-        <!-- <app-letsdopipes></app-letsdopipes> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
-        <!-- <div class="col-md-12">
-           
-        </div> -->
-    </div>
+
+
+            <ul class="navbar-nav mr-auto ms-auto mx-2">
+                <li class="nav-item active">
+                    <a class="nav-link" routerLink="/home">Data<span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/about">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/contact">Directives</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="">
+                        Login
+                    </a>
+                </li>
+
+
+            </ul>
+
+        </div>
+    </nav>
 </div>
+<router-outlet></router-outlet>

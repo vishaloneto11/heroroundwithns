@@ -4,3 +4,13 @@ p {
     text-align: center;
     text-decoration: underline;
 }
+
+table,
+th,
+tr {
+    font-size: 14px;
+}
+
+.alink {
+    text-decoration: none;
+}

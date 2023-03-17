@@ -86,7 +86,7 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let user of onlineUserWeb">
-                        <th scope="row">{{user.id}}</th>
+                        <th scope="row"><a [routerLink]="['/about',user.id]" class="alink">{{user.id}}</a></th>
                         <th>{{user.name}}</th>
                         <th>{{user.username}}</th>
                         <th>{{user.email}}</th>
@@ -107,6 +107,36 @@
         </div>
     </div>
 </div>
+<hr>
+<!-- {{onlineUserPhotos |json}} -->
+<div class="container">
+    <div class="row">
+        <div class="col md-3" *ngFor="let card of onlineUserPhotos">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src={{card.url}} alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Album Id :{{card.albumId}}</h5>
+                    <h5 class="card-title">Song Id : {{card.id}}</h5>
+                    <p class="card-text">{{card.title}}</p>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<hr>
+
+
+
+
+
+
+
+
+
+
+<!-- ###################################################################################### -->
 <!-- http services data -->
 <!-- <pre>
     {{onlineUserWeb |json}}

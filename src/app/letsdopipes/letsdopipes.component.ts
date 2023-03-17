@@ -11,7 +11,7 @@ export class LetsdopipesComponent implements OnInit {
   employDetails: any[] = [];
   //  onlin api hit
   onlineUserWeb: any;
-
+  onlineUserPhotos: any;
   clientUser: any[] = [
     { id: 101, name: 'john', city: 'DELHI', salary: 2000, dob: new Date("05/10/1989") },
     { id: 102, name: 'peter', city: 'PUNE', salary: 80000, dob: new Date("05/12/1985") },
@@ -31,6 +31,10 @@ export class LetsdopipesComponent implements OnInit {
         this.onlineUserWeb = data;
       }
     )
+    this.employeService.getUserPhotos().subscribe(
+      (data: any) => {
+        this.onlineUserPhotos = data;
+      })
 
   }
 

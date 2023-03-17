@@ -8,18 +8,41 @@ import { DirectheroComponent } from './directhero/directhero.component';
 import { LetsdopipesComponent } from './letsdopipes/letsdopipes.component';
 import { AgePipe } from './letsdopipes/age.pipe';
 import { EmployDetailsService } from './services/employ-details.service';
+import { UserComponent } from './user/user.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+
+
+const routes: Routes = [
+  { path: ' ', component: HomeComponent },
+  { path: 'home', component: HerobinderComponent },
+  { path: 'about', component: LetsdopipesComponent },
+  { path: 'about/:id', component: UserComponent },
+  { path: 'contact', component: DirectheroComponent },
+  { path: '**', redirectTo: "home" }
+
+]
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HerobinderComponent,
     DirectheroComponent,
     LetsdopipesComponent,
-    AgePipe
+    AgePipe,
+    UserComponent,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(routes)
 
 
 
