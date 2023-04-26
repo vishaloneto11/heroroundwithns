@@ -34,6 +34,10 @@ export class DirectheroComponent {
 
   isUserLoggedIn: boolean = false;
   selectedCountry: string = ' ';
+  imageurla: string = "assets/images/firstnub.jpg"
+  imageurlb: string = "assets/images/nebulafinal.jpg"
+  imageswitch: string = "f";
+
 
   onLoginfun() {
     this.isUserLoggedIn = true;
@@ -42,6 +46,11 @@ export class DirectheroComponent {
     this.selectedCountry = e.target.value;
 
   }
+
+
+
+
+
 
 
   // users: string[] = ["vishal", "nitish", "kumar", "monu", "vishal", "nitish", "kumar", "monu", "vishal", "nitish", "kumar", "monu"]

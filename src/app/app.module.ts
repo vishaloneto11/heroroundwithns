@@ -13,6 +13,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { ProductComponent } from './product/product.component';
+import { ProductdetailsService } from './services/productdetails.service';
 
 
 const routes: Routes = [
@@ -21,6 +23,7 @@ const routes: Routes = [
   { path: 'about', component: LetsdopipesComponent },
   { path: 'about/:id', component: UserComponent },
   { path: 'contact', component: DirectheroComponent },
+  { path: 'Product', component: ProductComponent },
   { path: '**', redirectTo: "home" }
 
 ]
@@ -36,7 +39,8 @@ const routes: Routes = [
     UserComponent,
     AboutComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,7 @@ const routes: Routes = [
 
 
   ],
-  providers: [EmployDetailsService],
+  providers: [EmployDetailsService, ProductdetailsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

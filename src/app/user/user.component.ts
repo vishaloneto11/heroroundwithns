@@ -11,6 +11,7 @@ export class UserComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    console.log("Helooooooooooooooooooooooooooooooo", this.getbyid)
     let id = this.getbyid.snapshot.params["id"];
 
   }

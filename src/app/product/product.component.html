@@ -1,0 +1,24 @@
+<div class="container mt-2">
+    <div id="connect-widget"></div>
+    <div class="row">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of productlist">
+                    <th scope="row">{{product.id}}</th>
+                    <td>{{product.name}}</td>
+                    <td>{{product.email}}</td>
+
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
